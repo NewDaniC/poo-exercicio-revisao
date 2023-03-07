@@ -20,8 +20,13 @@ public class DVD extends Item  {
 		this.diretor = diretor;
 	}
 	
-	public static void print() {
+	@Override
+	public void print() {
 		System.out.println("\n ### DVD ###");
+		System.out.println("Título: " + getTitulo());
+		System.out.println("Duração: " + getDuracao());
+		System.out.println("Comentários: " + getComentarios());
+		System.out.println("Diretor: " + diretor);
 	}
 	
 	@Override

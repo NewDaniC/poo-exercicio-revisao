@@ -39,8 +39,11 @@ public class Item {
 		this.comentarios = comentarios;
 	}
 	
-	public static void print() {
+	public void print() {
 		System.out.println("\n ### ITEM ###");
+		System.out.println("Título: " + titulo);
+		System.out.println("Duração: " + duracao);
+		System.out.println("Comentários: " + comentarios);
 	}
 
 	@Override

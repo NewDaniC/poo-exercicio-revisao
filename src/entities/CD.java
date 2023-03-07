@@ -30,8 +30,14 @@ public class CD extends Item {
 		this.faixas = faixas;
 	}
 	
-	public static void print() {
+	@Override
+	public void print() {
 		System.out.println("\n ### CD ###");
+		System.out.println("Título: " + getTitulo());
+		System.out.println("Duração: " + getDuracao());
+		System.out.println("Comentários: " + getComentarios());
+		System.out.println("Artista: " + artista);
+		System.out.println("Número de Faixas: " + faixas);
 	}
 
 	@Override
