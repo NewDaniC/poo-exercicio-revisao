@@ -38,7 +38,7 @@ public class Database {
 		listDB.forEach(System.out::println);
 	}
 
-	/* imprime apenas os CDs; */
+	/* imprime apenas os CDs; 
 	public static void listCD(List<Item> listDB) {
 		for (int i = 0; i < listDB.size(); i++) {
 			if (listDB.get(i).getClass() == CD.class) {
@@ -47,6 +47,16 @@ public class Database {
 			}
 			listDB.get(i).print();
 		}
+	}
+	*/
+	
+	/* imprime apenas os CDs; */
+	public static void listCD(List<Item> listDB) {
+	    for (Item item : listDB) {
+	        if (item instanceof CD) {
+	            System.out.println(item);
+	        }
+	    }
 	}
 
 	/* imprime apenas os DVDs; */
