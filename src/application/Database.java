@@ -37,18 +37,6 @@ public class Database {
 	public static void list(List<Item> listDB) {
 		listDB.forEach(System.out::println);
 	}
-
-	/* imprime apenas os CDs; 
-	public static void listCD(List<Item> listDB) {
-		for (int i = 0; i < listDB.size(); i++) {
-			if (listDB.get(i).getClass() == CD.class) {
-				System.out.println(listDB.get(i));
-				//listDB.get(i).print();
-			}
-			listDB.get(i).print();
-		}
-	}
-	*/
 	
 	/* imprime apenas os CDs; */
 	public static void listCD(List<Item> listDB) {
@@ -61,10 +49,8 @@ public class Database {
 
 	/* imprime apenas os DVDs; */
 	public static void listDVD(List<Item> listDB) {
-		for (int i = 0; i < listDB.size(); i++) {
-			if (listDB.get(i).getClass() == DVD.class) {
-				System.out.println(listDB.get(i));
-			}
-		}
+	    listDB.stream()
+	            .filter(item -> item instanceof DVD)
+	            .forEach(System.out::println);
 	}
 }
