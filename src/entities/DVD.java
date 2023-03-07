@@ -20,6 +20,10 @@ public class DVD extends Item  {
 		this.diretor = diretor;
 	}
 	
+	public static void print() {
+		System.out.println("\n ### DVD ###");
+	}
+	
 	@Override
 	public String toString() {
 		return "*** DVD ***"

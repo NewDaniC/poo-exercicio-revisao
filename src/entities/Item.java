@@ -38,6 +38,10 @@ public class Item {
 	public void setComentarios(String comentarios) {
 		this.comentarios = comentarios;
 	}
+	
+	public static void print() {
+		System.out.println("\n ### ITEM ###");
+	}
 
 	@Override
 	public String toString() {

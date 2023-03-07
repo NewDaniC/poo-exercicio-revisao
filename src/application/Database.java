@@ -43,7 +43,9 @@ public class Database {
 		for (int i = 0; i < listDB.size(); i++) {
 			if (listDB.get(i).getClass() == CD.class) {
 				System.out.println(listDB.get(i));
+				//listDB.get(i).print();
 			}
+			listDB.get(i).print();
 		}
 	}
 

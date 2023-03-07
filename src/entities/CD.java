@@ -29,6 +29,10 @@ public class CD extends Item {
 	public void setFaixas(Integer faixas) {
 		this.faixas = faixas;
 	}
+	
+	public static void print() {
+		System.out.println("\n ### CD ###");
+	}
 
 	@Override
 	public String toString() {
