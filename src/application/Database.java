@@ -13,15 +13,28 @@ public class Database {
 
 		List<Item> listDB = new ArrayList<Item>();
 
-		/*
-		 * CD CD1 = new CD ("CD1", 15.0, "Comentario CD1", "Artista do CD1", 10);
-		 * listDB.add(CD1); int aux = CD1.getFaixas(); System.out.println(aux);
-		 */
-
-		listDB.add(new CD("CD1", 15.0, "Comentario CD1", "Artista do CD1", 10));
-		listDB.add(new DVD("DVD1", 115.0, "Comentario DVD1", "Diretor do DVD1"));
-		listDB.add(new CD("CD2", 17.0, "Comentario CD2", "Artista do CD2", 12));
-		listDB.add(new DVD("DVD2", 160.0, "Comentario DVD2", "Diretor do DVD2"));
+		CD cd1 = new CD("Back in Black", 42.4, "Comentários sobre Back in Black", "AC/DC", 10);
+	    CD cd2 = new CD("Thriller", 42.2, "Comentários sobre Thriller", "Michael Jackson", 9);
+	    CD cd3 = new CD("Dark Side of the Moon", 43.0, "Comentários sobre Dark Side of the Moon", "Pink Floyd", 10);
+	    CD cd4 = new CD("Nevermind", 49.0, "Comentários sobre Nevermind", "Nirvana", 12);
+	    CD cd5 = new CD("Abbey Road", 47.0, "Comentários sobre Abbey Road", "The Beatles", 17);
+	    DVD dvd1 = new DVD("The Godfather", 175.0, "Comentários sobre The Godfather", "Francis Ford Coppola");
+	    DVD dvd2 = new DVD("The Shawshank Redemption", 142.0, "Comentários sobre The Shawshank Redemption", "Frank Darabont");
+	    DVD dvd3 = new DVD("The Dark Knight", 152.0, "Comentários sobre The Dark Knight", "Christopher Nolan");
+	    DVD dvd4 = new DVD("Pulp Fiction", 154.0, "Comentários sobre Pulp Fiction", "Quentin Tarantino");
+	    DVD dvd5 = new DVD("The Lord of the Rings: The Fellowship of the Ring", 178.0, "Comentários sobre The Lord of the Rings", "Peter Jackson");
+	    
+	    listDB.add(cd1);
+        listDB.add(cd2);
+        listDB.add(cd3);
+        listDB.add(cd4);
+        listDB.add(cd5);
+        listDB.add(dvd1);
+        listDB.add(dvd2);
+        listDB.add(dvd3);
+        listDB.add(dvd4);
+        listDB.add(dvd5);
+	    
 
 		// imprime todos itens;
 		list(listDB);
