@@ -35,7 +35,9 @@ public class Database {
 
 	/* imprime todos itens; */
 	public static void list(List<Item> listDB) {
-		listDB.forEach(System.out::println);
+	    listDB.forEach(item -> {
+	        System.out.println(item.toString());
+	    });
 	}
 	
 	/* imprime apenas os CDs; */
