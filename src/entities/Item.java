@@ -44,6 +44,7 @@ public class Item {
 		System.out.println("Título: " + titulo);
 		System.out.println("Duração: " + duracao);
 		System.out.println("Comentários: " + comentarios);
+		System.out.println("Sobrescreveu ITEM!");
 	}
 
 	@Override

@@ -24,6 +24,10 @@ public class Database {
 		DVD dvd3 = new DVD("The Dark Knight", 152.0, "Comentários sobre The Dark Knight", "Christopher Nolan");
 		DVD dvd4 = new DVD("Pulp Fiction", 154.0, "Comentários sobre Pulp Fiction", "Quentin Tarantino");
 		DVD dvd5 = new DVD("The Lord of the Rings: The Fellowship of the Ring", 178.0, "Comentários sobre The Lord of the Rings", "Peter Jackson");
+		
+		Item item1 = new Item("Titulo do Item1", 10.0, "Comentario Item1");
+		Item item2 = new Item("Titulo do Item2", 20.0, "Comentario Item2");
+		Item item3 = new Item("Titulo do Item3", 30.0, "Comentario Item3");
 
 		listDB.add(cd1);
 		listDB.add(cd2);
@@ -36,13 +40,18 @@ public class Database {
 		listDB.add(dvd4);
 		listDB.add(dvd5);
 		
+		listDB.add(item1);
+		listDB.add(item2);
+		listDB.add(item3);
+		
 		menu(listDB);
 	}
 
 	/* imprime todos itens; */
 	public static void list(List<Item> listDB) {
 		listDB.forEach(item -> {
-			System.out.println(item.toString());
+			//System.out.println(item.toString());
+			item.print();
 		});
 	}
 
@@ -64,7 +73,8 @@ public class Database {
 	public static void menu(List<Item> listDB) {
 		Scanner sc = new Scanner(System.in);
 		int opcao;
-		do {			
+		do {
+			System.out.println();
 			System.out.println("1 - Imprimir todos os itens");
 			System.out.println("2 - Imprimir apenas os CDs");
 			System.out.println("3 - Imprimir apenas os DVDs");
