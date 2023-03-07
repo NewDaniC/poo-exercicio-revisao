@@ -1,5 +1,6 @@
 package application;
 
+import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,15 +36,27 @@ public class Database {
         listDB.add(dvd4);
         listDB.add(dvd5);
 	    
+        Scanner sc = new Scanner(System.in);
 
-		// imprime todos itens;
-		list(listDB);
-		
-		// imprime apenas os CDs;
-		listCD(listDB);
-		
-		// imprime apenas os DVDs;
-		listDVD(listDB);
+        menu(); /* Imprime as opcoes do usuario */
+
+        int escolha = sc.nextInt();
+        
+        switch (escolha) {
+            case 1:
+                list(listDB);
+                break;
+            case 2:
+                listCD(listDB);
+                break;
+            case 3:
+                listDVD(listDB);
+                break;
+            default:
+                System.out.println("Opção inválida!");
+                break;
+        }
+        sc.close();
 	}
 
 	/* imprime todos itens; */
@@ -67,5 +80,12 @@ public class Database {
 	    listDB.stream()
 	            .filter(item -> item instanceof DVD)
 	            .forEach(System.out::println);
+	}
+	
+	public static void menu() {
+		System.out.println("Escolha uma opção:");
+	    System.out.println("1 - Imprimir todos os itens");
+	    System.out.println("2 - Imprimir apenas os CDs");
+	    System.out.println("3 - Imprimir apenas os DVDs");
 	}
 }
